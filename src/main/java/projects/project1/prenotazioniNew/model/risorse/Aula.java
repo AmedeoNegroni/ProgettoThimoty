@@ -6,6 +6,7 @@ public class Aula extends Risorsa {
 
 	public Aula(int limite) {
 		this.limite = limite;
+		this.caratteristica = "posti";
 	}
 	
 }

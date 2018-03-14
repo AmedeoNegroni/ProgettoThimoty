@@ -36,4 +36,15 @@ public class Utente {
 		this.password = password;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("\nUtente:\n");
+		sb.append("\tmail: " + this.mail + "\n");
+		if (ruolo == 1)
+			sb.append("\truolo: admin\n");
+		else sb.append("\truolo: user\n");
+		return sb.toString();
+	}
+	
 }

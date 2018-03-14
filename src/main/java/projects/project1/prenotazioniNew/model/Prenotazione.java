@@ -1,6 +1,8 @@
 package projects.project1.prenotazioniNew.model;
 
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class Prenotazione {
 
@@ -65,6 +67,18 @@ public class Prenotazione {
 
 	public void setDataConsegna(DateTime dataConsegna) {
 		this.dataConsegna = dataConsegna;
+	}
+	
+	@Override
+	public String toString() {
+		DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy");
+		StringBuffer sb = new StringBuffer();
+		sb.append("\nPrenotazione n." + this.id + "\n");
+		sb.append("\trisorsa prenotata: " + this.idRisorsa + "\n");
+		sb.append("\tutente: " + this.mail +"\n");
+		sb.append("\tdata inizio: " + formatter.print(this.dataInizio) + "\n");
+		sb.append("\tdata fine: " + formatter.print(this.dataFine) + "\n");
+		return sb.toString();
 	}
 	
 }

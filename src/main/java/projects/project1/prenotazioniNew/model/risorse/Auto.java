@@ -6,6 +6,7 @@ public class Auto extends Risorsa {
 
 	public Auto(int limite) {
 		this.limite = limite;
+		this.caratteristica = "posti";
 	}
 	
 }

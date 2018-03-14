@@ -174,4 +174,18 @@ public class PrenotazioniTest {
 		Assert.assertTrue("Ci sono 2 PC con 4 o più giga liberi", numResources == 2);
 	}
 	
+	@Test
+	public void shouldPrintSomething() {
+		
+		for (Risorsa r: GestioneRisorse.getListaRisorse())
+			System.out.println(r);
+		
+		for (Prenotazione p: GestionePrenotazioni.getListaPrenotazioni())
+			System.out.println(p);
+		
+		for (Utente u: GestioneUtenti.getListaUtenti())
+			System.out.println(u);
+		
+	}
+	
 }

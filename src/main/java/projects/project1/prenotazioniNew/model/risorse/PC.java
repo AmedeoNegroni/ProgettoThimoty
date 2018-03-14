@@ -6,6 +6,7 @@ public class PC extends Risorsa {
 
 	public PC(int limite) {
 		this.limite = limite;
+		this.caratteristica = "GB di RAM";
 	}
 	
 }
